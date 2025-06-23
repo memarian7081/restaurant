@@ -71,12 +71,21 @@
                                 <li><a href="#">Deep Dropdown 5</a></li>
                             </ul>
                         </li>
+
                         <li><a href="#">Dropdown 2</a></li>
                         <li><a href="#">Dropdown 3</a></li>
                         <li><a href="#">Dropdown 4</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{route('register')}}">ثبت نام</a></li>
+                <li class="dropdown"><a href="#"><span>ورود  و خروج</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li><a href="{{route('login')}}">ورود</a></li>
+                        <li><a href="{{route('logout')}}">خروج</a></li>
+
+                    </ul>
+                </li>
+{{--                <li><a href="{{route('login')}}">ورود</a></li>--}}
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
