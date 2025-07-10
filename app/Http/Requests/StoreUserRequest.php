@@ -27,6 +27,7 @@ class StoreUserRequest extends FormRequest
             'email' => 'required|string|email|max:50|unique:users',
             'password' => 'required|string|min:4|confirmed',
             'phone' => 'nullable|unique:users|regex:/^([0-9]{11})$/',
+            'role' => 'required|in:admin,user,guest',
         ];
     }
     public function messages(): array

@@ -22,12 +22,14 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email,',
             'userName' => 'required|unique:users,userName,',
             'phone' => 'required|min:5|max:15',
+            'role' => 'required',
         ]);
         $users->update([
             'name' => $validated['name'],
             'email' => $validated['email'],
             'userName' => $validated['userName'],
             'phone' => $validated['phone'],
+            'role' => $validated['role'],
         ]);
     }
     public function destroy($id){

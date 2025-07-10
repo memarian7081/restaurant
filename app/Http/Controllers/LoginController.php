@@ -23,6 +23,7 @@ class LoginController extends Controller
             'userName' =>$validated['userName'],
             'phone' =>$validated['phone'],
             'remember_token' =>Str::random(30),
+            'role' => $validated['role'],
         ]);
         return redirect()->route('home');
     }
